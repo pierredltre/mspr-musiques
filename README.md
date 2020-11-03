@@ -1,3 +1,5 @@
-# mspr-musiques
+# ___ est un site visant à répertorier les nouveaux albums (ou singles) sortis et y retrouver les albums du moment.
 
-site pour répertorier les derniers albums / singles sortis.
+## Ce site a été réalisé au cours d'un MSPR PHP et MySQL.
+Membres du projet : Charles, Léo, Adrien & Pierre
+
