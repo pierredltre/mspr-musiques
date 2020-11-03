@@ -6,6 +6,10 @@ en tant que : Rayan
 je veux : des playlists mises à jours continuellement à propos des nouveaux talents
 afin de : découvrir de nouveaux artistes peu connus sur les plateformes de streaming
 
-en tant que : Manon (et autres)
+en tant que : Manon 
 je veux : des infos en continue (articles, classements, prochaines sorties d'albums/singles)
 afin de : découvrir de nouveaux artistes et/ou de nouveaux genres musicaux
+
+en tant que : Martin (travaille dans le Marketing)
+je veux : un classement des artistes les plus écoutés 
+afin de : pouvoir mettre en oeuvre des opérations marketing avec eux & mettre en avant une marque de vêtements
