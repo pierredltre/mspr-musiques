@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>ARTISTE</span> (
+    <span class='primary'>artiste_id</span>,
+    <span class='normal'>nom</span>
+  )
+</div>
+<div>
+  <span class='relation'>CERTIFICATION</span> (
+    <span class='primary'>certification_id</span>,
+    <span class='normal'>titre</span>,
+    <span class='normal'>date_obtention</span>,
+    <span class='normal'>single</span>
+  )
+</div>
+<div>
+  <span class='relation'>ECRIT</span> (
+    <span class='foreign primary'>chanson_id</span>,
+    <span class='foreign primary'>artiste_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>COMPOSE</span> (
+    <span class='foreign primary'>album_id</span>,
+    <span class='foreign primary'>artiste_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>EST DELIVREE A</span> (
+    <span class='foreign primary'>album_id</span>,
+    <span class='foreign primary'>certification_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>UTILISATEUR</span> (
+    <span class='primary'>user_id</span>,
+    <span class='normal'>pseudo</span>,
+    <span class='normal'>mail</span>,
+    <span class='normal'>mdp</span>
+  )
+</div>
+<div>
+  <span class='relation'>AJOUTE</span> (
+    <span class='foreign primary'>user_id</span>,
+    <span class='foreign primary'>chanson_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>CHANSON</span> (
+    <span class='primary'>chanson_id</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>date_de_sortie</span>,
+    <span class='normal'>cover</span>,
+    <span class='normal'>nombre_ecoutes</span>,
+    <span class='normal'>genre</span>,
+    <span class='normal'>pays</span>
+  )
+</div>
+<div>
+  <span class='relation'>ALBUM</span> (
+    <span class='primary'>album_id</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>date_de_sortie</span>,
+    <span class='normal'>cover</span>,
+    <span class='normal'>nombre_ecoutes</span>,
+    <span class='normal'>genre</span>,
+    <span class='normal'>pays</span>,
+    <span class='normal'>single</span>,
+    <span class='foreign'>chanson_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>CLASSEE DANS</span> (
+    <span class='foreign primary'>classement_id</span>,
+    <span class='foreign primary'>chanson_id</span>,
+    <span class='normal'>date_insertion</span>
+  )
+</div>
+<div>
+  <span class='relation'>CLASSEMENT</span> (
+    <span class='primary'>classement_id</span>,
+    <span class='normal'>pays</span>,
+    <span class='normal'>genre</span>
+  )
+</div>
+</div>
+</body>
+</html>

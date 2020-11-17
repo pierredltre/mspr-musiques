@@ -1,0 +1,24 @@
+:
+:
+ARTISTE: artiste_id, nom
+:
+CERTIFICATION: certification_id, titre, date_obtention, single
+
+
+:
+:
+ECRIT, 0N CHANSON, 0N ARTISTE
+COMPOSE, 0N ALBUM, 0N ARTISTE
+EST DELIVREE A, 0N ALBUM, 1N CERTIFICATION
+
+UTILISATEUR: user_id, pseudo, mail, mdp
+AJOUTE, 1N UTILISATEUR, 0N CHANSON
+CHANSON: chanson_id, nom, date_de_sortie, cover, nombre_ecoutes, genre, pays
+APPARTIENT A, 1N CHANSON, 11 ALBUM
+ALBUM: album_id, nom, date_de_sortie, cover, nombre_ecoutes, genre, pays, single
+
+:
+:
+CLASSEE DANS, 0N CLASSEMENT, 0N CHANSON : date_insertion
+CLASSEMENT: classement_id, pays, genre
+:
