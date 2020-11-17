@@ -1,0 +1,28 @@
+# utilisateurs (admin) :
+id
+pseudo
+mail
+mdp
+
+# Single
+id
+Nom
+Date de sortie
+Artiste
+écoutes
+genre
+pays
+
+# Album
+id
+Nom 
+Date de sortie
+Artiste
+écoutes
+genre
+pays
+
+# Certifications
+id
+titre single ou album (or, platine, diamant)
+date d’obtention
