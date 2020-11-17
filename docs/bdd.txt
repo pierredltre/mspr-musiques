@@ -1,4 +1,6 @@
-# utilisateurs (admin) :
+Dictionnaire de données
+
+# utilisateurs (admin)
 id
 pseudo
 mail
@@ -13,6 +15,13 @@ Artiste
 genre
 pays
 
+# Chansons
+nom
+date de sortie
+artiste
+nombre d’écoutes
+genre
+
 # Album
 id
 Nom 
@@ -22,7 +31,14 @@ Artiste
 genre
 pays
 
+# Top
+id
+chansons
+date d’entrée
+pays
+genre
+
 # Certifications
 id
 titre single ou album (or, platine, diamant)
-date d’obtention
+date d’obtention 
