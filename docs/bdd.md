@@ -4,6 +4,7 @@
 ![MCD](./MCD/Musicologie.svg)
 
 ## Mocodo.net
+Site utilisé afin de réaliser le MCD
 ```
 ARTISTE ( artiste_id, nom )
 CERTIFICATION ( certification_id, titre, date_obtention, single )
