@@ -4,7 +4,7 @@
 ![Sitemap Musicologie](./sitemap/sitemap.png)
 
 ## Zoning
-![Zoning](./wireframe/Zoning.png){:twidth=50% }
+![Zoning](./wireframe/Zoning.png){:width=50% }
 ## Wireframe
 
 ### 
