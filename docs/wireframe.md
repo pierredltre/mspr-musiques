@@ -11,11 +11,17 @@
 ### Index
 ![Index](./wireframe/Index.png)
 
+---
+
 ### Prochaines sorties
 ![Prochaines sorties](./wireframe/Prochaines-sorties.png)
 
+---
+
 ### Certifications
 ![Certifications](./wireframe/Certifications.png)
+
+---
 
 ### Classement
 ![Classement](./wireframe/Zoning.png)
