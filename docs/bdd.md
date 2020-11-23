@@ -1,44 +1,37 @@
-Dictionnaire de données
+# Dictionnaire de données
 
-# utilisateurs (admin)
-id
+## utilisateurs (admin)
+user_id
 pseudo
 mail
 mdp
 
-# Single
-id
-Nom
-Date de sortie
-Artiste
-écoutes
-genre
-pays
-
-# Chansons
+## Chansons
+chanson_id
 nom
 date de sortie
-artiste
+cover
 nombre d’écoutes
 genre
+pays
 
-# Album
-id
+## Album
+album_id
 Nom 
 Date de sortie
-Artiste
-écoutes
+cover
+nombre d'écoutes
 genre
 pays
+single (true/false)
 
-# Top
-id
-chansons
-date d’entrée
+## Classement
+classement_id
 pays
 genre
 
-# Certifications
-id
-titre single ou album (or, platine, diamant)
-date d’obtention 
+## Certification
+certification_id
+titre (or, platine, diamant)
+date d’obtention
+single (true/false)
