@@ -1,7 +1,7 @@
 # Documentation de la base de données
 
 ## Mocodo.net
-````
+```
 ARTISTE ( artiste_id, nom )
 CERTIFICATION ( certification_id, titre, date_obtention, single )
 ECRIT ( chanson_id, artiste_id )
