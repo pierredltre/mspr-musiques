@@ -4,7 +4,7 @@
 ![Sitemap Musicologie](./sitemap/sitemap.png)
 
 ## Zoning
-![Zoning](./wireframe/Zoning.png = x500)
+![Zoning](./wireframe/Zoning.png =800x400)
 ## Wireframe
 
 ### 
