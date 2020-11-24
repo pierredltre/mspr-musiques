@@ -1,0 +1,29 @@
+- artiste_id : _int_
+- nom : _varchar(64)_
+- certification_id : _int_
+- titre : _varchar(64)_
+- date_obtention : _date_
+- single : _varchar(64)_
+- user_id : _int_
+- pseudo : _varchar(64)_
+- mail : _varchar(254)_
+- mdp : _varchar(254)_
+- chanson_id : _int_
+- nom : _varchar(64)_
+- date_de_sortie : _date_
+- cover
+- nombre_ecoutes
+- genre : _varchar(64)_
+- pays : _varchar(64)_
+- album_id : _int_
+- nom : _varchar(64)_
+- date_de_sortie : _date_
+- cover
+- nombre_ecoutes
+- genre : _varchar(64)_
+- pays : _varchar(64)_
+- single : _varchar(64)_
+- date_insertion : _date_
+- classement_id : _int_
+- pays : _varchar(64)_
+- genre : _varchar(64)_
