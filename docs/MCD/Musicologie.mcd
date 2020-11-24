@@ -1,8 +1,8 @@
 :
 :
-ARTISTE: artiste_id, nom
+ARTISTE: artiste_id[int], nom[varchar(64)]
 :
-CERTIFICATION: certification_id, titre, date_obtention, single
+CERTIFICATION: certification_id[int], titre[varchar(64)], date_obtention[date], single[varchar(64)]
 
 
 :
@@ -11,14 +11,14 @@ ECRIT, 0N CHANSON, 0N ARTISTE
 COMPOSE, 0N ALBUM, 0N ARTISTE
 EST DELIVREE A, 0N ALBUM, 1N CERTIFICATION
 
-UTILISATEUR: user_id, pseudo, mail, mdp
+UTILISATEUR: user_id[int], pseudo[varchar(64)], mail[varchar(254)], mdp[varchar(254)]
 AJOUTE, 1N UTILISATEUR, 0N CHANSON
-CHANSON: chanson_id, nom, date_de_sortie, cover, nombre_ecoutes, genre, pays
-APPARTIENT A, 1N CHANSON, 11 ALBUM
-ALBUM: album_id, nom, date_de_sortie, cover, nombre_ecoutes, genre, pays, single
+CHANSON: chanson_id[int], nom[varchar(64)], date_de_sortie[date], cover, nombre_ecoutes, genre[varchar(64)], pays[varchar(64)]
+APPARTIENT A, 11 CHANSON, 1N ALBUM
+ALBUM: album_id[int], nom[varchar(64)], date_de_sortie[date], cover, nombre_ecoutes, genre[varchar(64)], pays[varchar(64)], single[varchar(64)]
 
 :
 :
-CLASSEE DANS, 0N CLASSEMENT, 0N CHANSON : date_insertion
-CLASSEMENT: classement_id, pays, genre
+CLASSEE DANS, 0N CLASSEMENT, 0N CHANSON : date_insertion[date]
+CLASSEMENT: classement_id[int], pays[varchar(64)], genre[varchar(64)]
 :
