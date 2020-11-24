@@ -1,10 +1,21 @@
 <?php
-require_once "../src/connexion.php";
-$sql = file_get_contents('migrations/20201117_1704.sql');
-$res = $dbh->exec($sql);
+    require "../src/connexion.php";
+    $date = "20201117_1704";
+    $versions = "migrations-versions.txt";
+    
+    if(!file_exists($versions) || strpos(file_get_contents($versions),$date) === false) {
+        $sql = file_get_contents('migrations/' . $date . '.sql');
 
-if (!$res) {
-    echo "\nPDO::errorInfo():\n";
-    print_r($dbh->errorInfo());
-}
-?>
+        $res = $dbh->exec($sql);
+        if ($res === false) {
+            echo "\nPDO::errorInfo():\n";
+            print_r($dbh->errorInfo());
+        }
+        else {
+            echo "Migration effectuée avec succès !";
+            file_put_contents($versions, $date . "\n", FILE_APPEND);
+        }
+    }
+    else {
+        echo "Migration déjà effectuée !";
+    }
