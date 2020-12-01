@@ -38,20 +38,21 @@ foreach ($tables as $table) {
     }
     echo("<pre>");
 }
+// Refaire function
 
-function formulaireChanson() {
-    echo "<br>";
-    echo "<h3>Ajouter une chanson</h3>";
-    echo "<form action=\"#\" method=\"post\" enctype=\"multipart/form-data\">";
-    echo "<label>Nom de la chanson</label> <br>";
-    echo "<input></input> <br>";
-    echo "<label>Date de sortie</label> <br>";
-    echo "<input type=\"date\"></input> <br>";
-    echo "<label>Cover</label> <br>";
-    echo "<input type=\"file\"></input> <br>";
-    echo "<label>Nombre d'écoutes</label> <br>";
-    echo "<input></input> <br>";
-    echo "<input type=\"submit\"></select> <br>";
-    echo "</form>";
-    echo "<br>";
-}
+// function formulaireChanson() {
+//     echo "<br>";
+//     echo "<h3>Ajouter une chanson</h3>";
+//     echo "<form action=\"#\" method=\"post\" enctype=\"multipart/form-data\">";
+//     echo "<label>Nom de la chanson</label> <br>";
+//     echo "<input></input> <br>";
+//     echo "<label>Date de sortie</label> <br>";
+//     echo "<input type=\"date\"></input> <br>";
+//     echo "<label>Cover</label> <br>";
+//     echo "<input type=\"file\"></input> <br>";
+//     echo "<label>Nombre d'écoutes</label> <br>";
+//     echo "<input></input> <br>";
+//     echo "<input type=\"submit\"></select> <br>";
+//     echo "</form>";
+//     echo "<br>";
+// }
