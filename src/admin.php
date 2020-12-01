@@ -17,8 +17,10 @@ $sql = "";
 
 foreach ($tables as $table) {
     $donnees = $dbh->query("SELECT * FROM $table");
+    echo $table;
     echo("<pre>");
-    foreach ($donnees as $colonnes) {
+    foreach ($donnees->fetchAll(PDO::FETCH_ASSOC) as $colonnes) {
+        // print_r(array_keys($colonnes));
         print_r($colonnes);
         // echo $colonnes['nom'];
     }
