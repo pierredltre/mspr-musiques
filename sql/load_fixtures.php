@@ -6,7 +6,7 @@
 
     foreach ($fichiers as $fichier) {
         // ici on concatène toutes les requetes sql
-        $sql .= "\n" . file_get_contents("./migrations/" . $fichier);
+        $sql .= "\n" . file_get_contents("./fixtures/" . $fichier);
     }
 
     //$res = $dbh->exec($sql);

@@ -23,12 +23,35 @@ foreach ($tables as $table) {
         // print_r(array_keys($colonnes));
         print_r($colonnes);
         // echo $colonnes['nom'];
+
+        if (array_key_exists("chanson_id", $colonnes)) {
+            formulaireChanson();
+        }
+
+        if ($table == "CHANSON") {
+            formulaireChanson();
+        } else if ($table == "ALBUM") {
+            // formulaireChanson();
+        } else if ($table == "ARTISTE") {
+            // formulaireChanson();
+        }
     }
     echo("<pre>");
 }
 
-// function form() {
-//     echo "<form>";
-//     echo "<label></label>";
-//     echo "</form>";
-// }
+function formulaireChanson() {
+    echo "<br>";
+    echo "<h3>Ajouter une chanson</h3>";
+    echo "<form action=\"#\" method=\"post\" enctype=\"multipart/form-data\">";
+    echo "<label>Nom de la chanson</label> <br>";
+    echo "<input></input> <br>";
+    echo "<label>Date de sortie</label> <br>";
+    echo "<input type=\"date\"></input> <br>";
+    echo "<label>Cover</label> <br>";
+    echo "<input type=\"file\"></input> <br>";
+    echo "<label>Nombre d'écoutes</label> <br>";
+    echo "<input></input> <br>";
+    echo "<input type=\"submit\"></select> <br>";
+    echo "</form>";
+    echo "<br>";
+}
