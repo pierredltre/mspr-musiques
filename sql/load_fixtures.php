@@ -27,4 +27,4 @@
     } else {
         echo "Fixtures chargées avec succès !";
     }
-?>
+?>cli
