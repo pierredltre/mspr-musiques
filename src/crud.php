@@ -2,7 +2,9 @@
 require_once('connexion.php');
 
 $table = $_GET['table'];
-$id = $_POST['id'];
+if (isset($_GET['id'])) {
+  $id = $_POST['id'];
+}
 $nom = $_POST['nom'];
 $date = $_POST['dateSortie'];
 $cover = $_FILES['cover']['name'];
@@ -48,5 +50,9 @@ if (isset($_GET['create']) && !empty($table)) {
   $create->bindParam(':genre', $genre);
   $create->bindParam(':pays', $pays);
   $create->bindParam(':single', $single);
+
+  if($create->execute()) {
+    header('Location:./admin.php');
+  }
 }
 ?>
