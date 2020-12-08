@@ -18,23 +18,22 @@ function table_tpl($thead,$rows){
 $html = <<<EOT
  
 <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">$thead[0]</th>
-                <th scope="col">$thead[1]</th>
-                <th scope="col">$thead[2]</th>
-                <th scope="col">$thead[3]</th>
-                <th scope="col">$thead[4]</th>
-                <th scope="col">$thead[5]</th>
-                <th scope="col">$thead[6]</th>
-                <th scope="col">$thead[7]</th>
-            </tr>
-        </thead>
-        <tbody>
-            $rows
-        </tbody>
-    </table>
- 
+  <thead>
+    <tr>
+      <th scope="col">$thead[0]</th>
+      <th scope="col">$thead[1]</th>
+      <th scope="col">$thead[2]</th>
+      <th scope="col">$thead[3]</th>
+      <th scope="col">$thead[4]</th>
+      <th scope="col">$thead[5]</th>
+      <th scope="col">$thead[6]</th>
+      <th scope="col">$thead[7]</th>
+    </tr>
+  </thead>
+    <tbody>
+        $rows
+    </tbody>
+  </table>
 EOT;
  
 return $html;
@@ -45,7 +44,7 @@ function echo_ligne_modeles($donnee)
 {
   $html = <<<EOT
       <tr>
-      <td scope="row">{$donnee['album_id']}</td>
+        <th scope="row">{$donnee['album_id']}</th>
         <td>{$donnee['nom']}</td>
         <td>{$donnee['date_de_sortie']}</td>
         <td>{$donnee['cover']}</td>
@@ -53,8 +52,8 @@ function echo_ligne_modeles($donnee)
         <td>{$donnee['genre']}</td>
         <td>{$donnee['pays']}</td>
         <td>{$donnee['single']}</td>
-        <td><a href="crud.php?delete&table=ALBUM&id={$donnee['album_id']}"><button>Supprimer</button></a></td>
-        <td><a href="crud.php?update&table=ALBUM&id={$donnee['album_id']}"><button>Modifier</button></a></td>
+        <td><a href="crud.php?delete&table=ALBUM&id={$donnee['album_id']}"><button class="btn btn-success">Supprimer</button></a></td>
+        <td><a href="update.php?table=ALBUM&id={$donnee['album_id']}"><button class="btn btn-danger">Modifier</button></a></td>
       </tr>
   EOT;
   return $html;
@@ -73,12 +72,11 @@ function echo_ligne_modeles($donnee)
   }
   echo table_tpl(['IDs', 'Liste des albums', 'Date de sortie', 'Cover', 'Nombre d\'écoutes', 'Genre', 'Pays', 'Single'], $rows);
   ?>
-        </tbody>
-    </table>
-
-
+  <a href="create.php?create&table=ALBUM">
+    <button>Ajouter un album</button>
+  </a>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
 </body>
  
 </html>
