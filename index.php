@@ -16,10 +16,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-item nav-link active" href="#">Prochaines sorties <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="#">Nouveautés </a>
+                <a class="nav-item nav-link active" href="#">Tendances</a>
+                <a class="nav-item nav-link active" href="#">Classements</a>
+                <a class="nav-item nav-link active" href="#">Certifications</a>
+              
             </div>
         </div>
     </nav>
