@@ -1,6 +1,6 @@
 <?php
 require_once './connexion.php';
-
+ 
 if (!empty($_POST)) {
     $titreAlbum = $_POST['titreAlbum'];
     $dateAlbum = $_POST['dateAlbum'];
@@ -38,7 +38,7 @@ if (!empty($_POST)) {
       $sql->bindParam(':genre', $genreAlbum);
       $sql->bindParam(':pays', $paysAlbum);
       $sql->bindParam(':single', $single);
-  
+      
       if (!empty($_FILES['cover'])) {
         $uploadDir = '../uploads/';
         move_uploaded_file($_FILES['cover']['tmp_name'],$uploadDir.$cover);

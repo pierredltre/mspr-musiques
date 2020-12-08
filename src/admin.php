@@ -24,6 +24,9 @@ foreach ($tables as $table) {
     foreach ($donnees->fetchAll(PDO::FETCH_ASSOC) as $colonnes) {
         // print_r(array_keys($colonnes));
         print_r($colonnes);
+        if ($table == "ALBUM") { 
+          echo(table());
+        }
         echo "</div>";
         echo "<div class=\"col-lg-6\">";
         // if (array_key_exists("chanson_id", $colonnes) && array_key_exists("chanson_id", $colonnes)) {
@@ -82,7 +85,48 @@ function formAlbum() {
     EOT;
  
     return $html;
- }
+}
+
+function table() {
+  $html = <<<EOT
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">IDs</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Date de sortie</th>
+        <th scope="col">Cover</th>
+        <th scope="col">Nombre d'écoutes</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Pays</th>
+        <th scope="col">Single</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  EOT;
+
+  return $html;
+}
 
 ?>
 </div>
