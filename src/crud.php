@@ -2,9 +2,7 @@
 require_once('connexion.php');
 
 $table = $_GET['table'];
-if (isset($_GET['id'])) {
-  $id = $_POST['id'];
-}
+$id = $_GET['id'];
 $nom = $_POST['nom'];
 $date = $_POST['dateSortie'];
 $cover = $_FILES['cover']['name'];
