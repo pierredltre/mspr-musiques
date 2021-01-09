@@ -2,13 +2,13 @@ CREATE DATABASE IF NOT EXISTS `MUSICOLOGIE` DEFAULT CHARACTER SET utf8 COLLATE u
 USE `MUSICOLOGIE`;
 
 CREATE TABLE `ARTISTE` (
-  `artiste_id` int,
+  `artiste_id` int AUTO_INCREMENT,
   `nom` varchar(64),
   PRIMARY KEY (`artiste_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `CERTIFICATION` (
-  `certification_id` int,
+  `certification_id` int AUTO_INCREMENT,
   `titre` varchar(64),
   `date_obtention` date,
   `single` varchar(64),
@@ -34,7 +34,7 @@ CREATE TABLE `EST_DELIVREE_A` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `UTILISATEUR` (
-  `user_id` int,
+  `user_id` int AUTO_INCREMENT,
   `pseudo` varchar(64),
   `mail` varchar(254),
   `mdp` varchar(254),
@@ -48,7 +48,7 @@ CREATE TABLE `AJOUTE` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `CHANSON` (
-  `chanson_id` int,
+  `chanson_id` int AUTO_INCREMENT,
   `nom` varchar(64),
   `date_de_sortie` date,
   `cover` VARCHAR(42),
@@ -60,7 +60,7 @@ CREATE TABLE `CHANSON` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `ALBUM` (
-  `album_id` int,
+  `album_id` int AUTO_INCREMENT,
   `nom` varchar(64),
   `date_de_sortie` date,
   `cover` VARCHAR(42),
@@ -79,7 +79,7 @@ CREATE TABLE `CLASSEE_DANS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `CLASSEMENT` (
-  `classement_id` int,
+  `classement_id` int AUTO_INCREMENT,
   `pays` varchar(64),
   `genre` varchar(64),
   PRIMARY KEY (`classement_id`)

@@ -1,2 +1,2 @@
-INSERT INTO `ARTISTE` (`artiste_id`,`nom`) VALUES
- ( 1, 'drake' );
+INSERT INTO `ARTISTE` (`nom`) VALUES
+ (  'drake' );

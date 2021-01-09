@@ -63,7 +63,7 @@
               </div>
             </div>
           </form>
-      EOT;
+EOT;
       return $html;
     }
 

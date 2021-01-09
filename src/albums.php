@@ -52,10 +52,11 @@ function echo_ligne_modeles($donnee)
         <td>{$donnee['genre']}</td>
         <td>{$donnee['pays']}</td>
         <td>{$donnee['single']}</td>
+        <td><a href="chansons.php?table=CHANSON&id={$donnee['album_id']}"><button class="btn btn-primary">Ajouter chanson(s)</button></a></td>
         <td><a href="crud.php?delete&table=ALBUM&id={$donnee['album_id']}"><button class="btn btn-success">Supprimer</button></a></td>
         <td><a href="update.php?table=ALBUM&id={$donnee['album_id']}"><button class="btn btn-danger">Modifier</button></a></td>
       </tr>
-  EOT;
+EOT;
   return $html;
 }
  
