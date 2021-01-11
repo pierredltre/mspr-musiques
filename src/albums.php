@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
- 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <title>Document</title>
-    <style>
-        td{
-            border : 1px solid black;
-        }
-    </style>
-</head>
-
 <?php
+include('./includes/header.php');
+
 function table_tpl($thead,$rows){
 $html = <<<EOT
  
@@ -54,7 +41,7 @@ function echo_ligne_modeles($donnee)
         <td>{$donnee['single']}</td>
         <td><a href="chansons.php?table=CHANSON&id={$donnee['album_id']}"><button class="btn btn-primary">Gérer chanson(s)</button></a></td>
         <td><a href="crud.php?delete&table=ALBUM&id={$donnee['album_id']}"><button class="btn btn-success">Supprimer</button></a></td>
-        <td><a href="update.php?table=ALBUM&id={$donnee['album_id']}"><button class="btn btn-danger">Modifier</button></a></td>
+        <td><a href="update.php?table=ALBUM&albumID={$donnee['album_id']}"><button class="btn btn-danger">Modifier</button></a></td>
       </tr>
 EOT;
   return $html;
@@ -76,8 +63,5 @@ EOT;
   <a href="create.php?create&table=ALBUM">
     <button>Ajouter un album</button>
   </a>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> 
-</body>
- 
-</html>
+
+<?php include('./includes/footer.php'); ?>

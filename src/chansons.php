@@ -38,8 +38,8 @@ function echo_ligne_modeles($donnee)
         <td>{$donnee['nombre_ecoutes']}</td>
         <td>{$donnee['genre']}</td>
         <td>{$donnee['pays']}</td>
-        <td><a href="update.php?table=CHANSON&id={$donnee['chanson_id']}"><button class="btn btn-success">Modifier</button></a></td>
-        <td><a href="crud.php?deleteChanson&table=CHANSON&id={$donnee['chanson_id']}"><button class="btn btn-danger">Supprimer</button></a></td>
+        <td><a href="update.php?table=CHANSON&chansonID={$donnee['chanson_id']}&albumID={$donnee['album_id']}"><button class="btn btn-success">Modifier</button></a></td>
+        <td><a href="crud.php?deleteChanson&table=CHANSON&chansonID={$donnee['chanson_id']}"><button class="btn btn-danger">Supprimer</button></a></td>
       </tr>
 EOT;
   return $html;

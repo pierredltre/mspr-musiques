@@ -10,6 +10,7 @@ $ecoutes = $_POST['ecoutes'];
 $genre = $_POST['genre'];
 $pays = $_POST['pays'];
 $albumID = $_GET['albumID'];
+$chansonID = $_GET['chansonID'];
 
 // Supprimer Album
 if(isset($_GET['delete']) && !empty($table) && !empty($GET['id'])) {
@@ -22,9 +23,8 @@ if(isset($_GET['delete']) && !empty($table) && !empty($GET['id'])) {
 }
 
 // Modifier Album
-if(isset($_GET['update']) && !empty($table) && !empty($id)) {
-  $sql = 'UPDATE ' . $table . ' SET nom = :nom, date_de_sortie = :date, cover = :cover, nombre_ecoutes = :ecoutes, genre = :genre, pays = :pays, single = :single WHERE album_id = ' . $id;
-  $id = $_GET['id'];
+if(isset($_GET['update']) && !empty($table) && !empty($albumID)) {
+  $sql = 'UPDATE ' . $table . ' SET nom = :nom, date_de_sortie = :date, cover = :cover, nombre_ecoutes = :ecoutes, genre = :genre, pays = :pays, single = :single WHERE album_id = ' . $albumID;
   $single = $_POST['single'];
   $update = $dbh->prepare($sql);
   $update->bindParam(':nom', $nom);
@@ -89,5 +89,22 @@ if (isset($_GET['deleteChanson']) && !empty($_GET['id']) && !empty($table)) {
   if($query = $dbh->query($sql)) {
     echo 'Album supprimé';
     header('Location:./albums.php');
+  }
+}
+
+// Modifier Chanson
+if(isset($_GET['updateChanson']) && !empty($table) && !empty($chansonID)) {
+  $sql = 'UPDATE `CHANSON` SET `nom` = :nom, `date_de_sortie` = :dateSortie, `cover` = :cover, `nombre_ecoutes` = :ecoutes, `genre` = :genre, `pays` = :pays WHERE chanson_id = ' . $chansonID;
+  $update = $dbh->prepare($sql);
+  $update->bindParam(':nom', $nom);
+  $update->bindParam(':dateSortie', $date);
+  $update->bindParam(':cover', $cover);
+  $update->bindParam(':ecoutes', $ecoutes);
+  $update->bindParam(':genre', $genre);
+  $update->bindParam(':pays', $pays);
+
+  if($update->execute()) {
+    echo 'Chanson mise à jour';
+    header('Location:./chansons.php?table=CHANSON&id=' . $albumID);
   }
 }
