@@ -1,7 +1,8 @@
 
   <?php
+    $title = "Update";
     include('./includes/header.php');
-    require_once('connexion.php');
+    require_once "./includes/connexion.php";
 
     $table = $_GET['table'];
   
@@ -11,12 +12,15 @@
       $sql = "SELECT * FROM ALBUM WHERE album_id = $albumID";
       $donnees = $dbh->query($sql);
       foreach ($donnees->fetchAll(PDO::FETCH_ASSOC) as $n) {
+        
         echo(album($n, $table, $albumID));
       }
     }
 
     function album($donnee, $table, $id) {
       $html = <<<EOT
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <h2>Modifier l'album {$donnee['nom']}</h2>
           <form class="col-6" method="post" action="crud.php?update&table={$table}&albumID={$id}" enctype="multipart/form-data">
             <div class="row">
               <div class="form-group col-12">
@@ -57,8 +61,8 @@
               <div class="form-group col-12">
                 <label name="single">Single</label>
                 <select name="single" class="form-control" value="{$donnee['single']}" required>
-                <option value="true">Oui</option>
-                <option value="false">Non</option>
+                <option value="1">Oui</option>
+                <option value="0">Non</option>
               </select>
               </div>
               <div class="form-group col-12">
@@ -66,6 +70,7 @@
               </div>
             </div>
           </form>
+          </main>
 EOT;
       return $html;
     }
@@ -83,6 +88,8 @@ EOT;
 
     function chanson($donnee, $table, $chansonID, $albumID) {
       $html = <<<EOT
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <h2>Modifier la chanson {$donnee['nom']}</h2>
           <form class="col-6" method="post" action="crud.php?updateChanson&table={$table}&chansonID={$chansonID}&albumID={$albumID}" enctype="multipart/form-data">
             <div class="row">
               <div class="form-group col-12">
@@ -125,6 +132,7 @@ EOT;
               </div>
             </div>
           </form>
+          </main>
 EOT;
       return $html;
     }

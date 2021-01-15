@@ -1,5 +1,6 @@
 <?php
-    require "../src/connexion.php";
+    require_once "../src/includes/connexion.php";
+    
     $date = "20201117_1704";
     $versions = "migrations-versions.txt";
     

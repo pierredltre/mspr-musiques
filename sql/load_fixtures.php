@@ -1,5 +1,5 @@
 <?php
-    require_once('../src/connexion.php');
+    require_once "../src/includes/connexion.php";
 
     $sql = '';
     $fichiers = ["album.sql", "artiste.sql", "chanson.sql", "compose.sql", "ecrit.sql"];
