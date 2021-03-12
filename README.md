@@ -9,5 +9,12 @@ Les albums et les singles se verront potentiellement attribuer des **certificati
 
 ## Ce site a été réalisé au cours d'un MSPR PHP et MySQL.
 
-Membres du projet : Charles, Léo, Adrien & Pierre
+Membres du projet : Charles, Adrien & Pierre
+
+## Images
+Le site a été réalisé sur une template Bootstrap.
+
+![Dashboard](../assets/img/dashboard.png)
+
+![Albums](../assets/img/albums.png)
 
