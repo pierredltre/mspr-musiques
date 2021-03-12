@@ -14,7 +14,9 @@ Membres du projet : Charles, Adrien & Pierre
 ## Images
 Le site a été réalisé sur une template Bootstrap.
 
+### Dashboard
 ![Dashboard](./assets/img/dashboard.png)
 
+### Albums
 ![Albums](./assets/img/albums.png)
 
